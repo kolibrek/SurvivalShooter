@@ -257,7 +257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &459682885
 AudioSource:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &475258800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1241,7 @@ GameObject:
   - 225: {fileID: 1960068199}
   - 95: {fileID: 1960068204}
   - 114: {fileID: 1960068203}
+  - 114: {fileID: 1960068205}
   m_Layer: 5
   m_Name: HUDCanvas
   m_TagString: Untagged
@@ -1365,6 +1366,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1960068205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960068197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c5f2596b84914ba996d2eca65ba5c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1970385549
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Camera/CamerFollow.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Enemy/EnemyMovement.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerShooting.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerShotgunShooting.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/BlastMine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/PauseManager.cs" Line="1" Column="19" />
+      <File FileName="Assets/Scripts/Camera/CamerFollow.cs" Line="18" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
