@@ -6,13 +6,16 @@ public class EnemyHealth : MonoBehaviour {
     public float sinkSpeed = 2.5f;
     public int scoreValue = 10;
     public AudioClip deathClip;
+	public bool isDead;
 
+	[Range(0,1)]
+	public float dropChance;
 
+	DropManager dropManager;
     Animator anim;
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
     CapsuleCollider capsuleCollider;
-    bool isDead;
     bool isSinking;
 
 
@@ -21,7 +24,7 @@ public class EnemyHealth : MonoBehaviour {
         enemyAudio = GetComponent <AudioSource> ();
         hitParticles = GetComponentInChildren <ParticleSystem> ();
         capsuleCollider = GetComponent <CapsuleCollider> ();
-
+		dropManager = GameObject.Find("DropItemManager").GetComponent<DropManager>();
         currentHealth = startingHealth;
     }
 
@@ -59,6 +62,7 @@ public class EnemyHealth : MonoBehaviour {
 
         enemyAudio.clip = deathClip;
         enemyAudio.Play ();
+		Invoke("DropItem", 0.2f);
     }
 
 
@@ -69,4 +73,11 @@ public class EnemyHealth : MonoBehaviour {
         ScoreManager.score += scoreValue;
         Destroy (gameObject, 2f);
     }
+
+	public void DropItem() {
+		float dropRoll = Random.value;
+		if (dropRoll < dropChance) {
+			dropManager.SpawnItem(transform.position + Vector3.up);
+		}
+	}
 }

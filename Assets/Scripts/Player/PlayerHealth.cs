@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -17,6 +16,8 @@ public class PlayerHealth : MonoBehaviour {
     AudioSource playerAudio;
     PlayerMovement playerMovement;
     PlayerShooting playerShooting;
+	PlayerShotgunShooting playerShotgunShooting;
+	Wisp[] wisps;
 	PlayerLayMine playerLayMine;
     bool isDead;
     bool damaged;
@@ -27,6 +28,8 @@ public class PlayerHealth : MonoBehaviour {
         playerAudio = GetComponent <AudioSource> ();
         playerMovement = GetComponent <PlayerMovement> ();
         playerShooting = GetComponentInChildren <PlayerShooting> ();
+		playerShotgunShooting = GetComponentInChildren<PlayerShotgunShooting>();
+		wisps = GetComponentsInChildren<Wisp>();
 		playerLayMine = GetComponent<PlayerLayMine>();
         currentHealth = startingHealth;
     }
@@ -68,6 +71,10 @@ public class PlayerHealth : MonoBehaviour {
 
         playerMovement.enabled = false;
         playerShooting.enabled = false;
+		playerShotgunShooting.enabled = false;
+		foreach (Wisp wisp in wisps) {
+			wisp.enabled = false;
+		}
 		playerLayMine.enabled = false;
     }
 
