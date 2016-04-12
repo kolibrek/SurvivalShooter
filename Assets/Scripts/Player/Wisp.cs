@@ -44,7 +44,7 @@ public class Wisp : MonoBehaviour {
 		translation.y = Mathf.Sin(Time.time) * 0.3f + 1;
 		transform.position = translation;
 
-		transform.RotateAround(transform.parent.position, Vector3.up, 1f);
+		transform.RotateAround(transform.parent.position, Vector3.up, Time.deltaTime * 10f);
 	}
 	
 	public void DisableEffects () {
