@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShotgunShooting : MonoBehaviour {
-
+	
 	public int damagePerShot = 12;
 	public float timeBetweenShells = 1.6f;
 	public float range = 10f;
-	
+	public int ammoRemaining = 0;
+	public Text ammoDisplay;
 	
 	float timer;
 	
@@ -26,6 +28,7 @@ public class PlayerShotgunShooting : MonoBehaviour {
 		gunLines = GetComponentsInChildren<LineRenderer>();
 		gunAudio = GetComponents<AudioSource>();
 		gunLight = GetComponent<Light> ();
+		ammoDisplay = GameObject.Find("AmmoText").GetComponent<Text>();
 	}
 	
 	void Update () {
@@ -35,13 +38,16 @@ public class PlayerShotgunShooting : MonoBehaviour {
 			timer = 0f;
 		}
 		
-		if (Input.GetButton("Fire2") && timer >= timeBetweenShells && Time.timeScale != 0) {
+		if (Input.GetButton("Fire2") && timer >= timeBetweenShells && Time.timeScale != 0 && ammoRemaining > 0) {
 			Blast();
+			ammoRemaining--;
 		}
 		
 		if(timer >= 0.15f * effectsDisplayTime) {
 			DisableEffects ();
 		}
+
+		ammoDisplay.text = "Alternate Ammo: " + ammoRemaining.ToString("00");
 	}
 	
 	

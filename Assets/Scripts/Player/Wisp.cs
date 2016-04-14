@@ -15,6 +15,7 @@ public class Wisp : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		laserLine = GetComponentInChildren<LineRenderer>();
+		Invoke("Disable", 30f);
 	}
 
 	void OnTriggerStay(Collider other) {
@@ -41,7 +42,7 @@ public class Wisp : MonoBehaviour {
 		}
 
 		Vector3 translation = transform.position;
-		translation.y = Mathf.Sin(Time.time) * 0.3f + 1;
+		translation.y = Mathf.Sin(Time.time) * 0.5f + 1;
 		transform.position = translation;
 
 		transform.RotateAround(transform.parent.position, Vector3.up, Time.deltaTime * 10f);
@@ -49,6 +50,13 @@ public class Wisp : MonoBehaviour {
 	
 	public void DisableEffects () {
 		laserLine.enabled = false;
+	}
+
+	public void Disable() {
+		DisableEffects();
+		GetComponent<ParticleSystem>().Stop();
+		GetComponent<Light>().enabled = false;
+		GetComponent<Wisp>().enabled = false;
 	}
 
 	void Shoot() {
