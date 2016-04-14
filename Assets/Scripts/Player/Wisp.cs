@@ -15,7 +15,7 @@ public class Wisp : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		laserLine = GetComponentInChildren<LineRenderer>();
-		Invoke("Disable", 30f);
+		Invoke("Disable", 60f);
 	}
 
 	void OnTriggerStay(Collider other) {

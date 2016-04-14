@@ -1,15 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerLayMine.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/BlastMine.cs">
     <Files>
-      <File FileName="Assets\Scripts\Managers\HealthPack.cs" Line="9" Column="3" />
-      <File FileName="Assets\Scripts\Managers\ShotgunAmmo.cs" Line="12" Column="51" />
-      <File FileName="Assets\Scripts\Managers\DropItem.cs" Line="15" Column="3" />
-      <File FileName="Assets\Scripts\Player\PlayerShotgunShooting.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\DropManager.cs" Line="13" Column="27" />
-      <File FileName="Assets\Scripts\Managers\WispDrop.cs" Line="17" Column="12" />
-      <File FileName="Assets\Scripts\Player\Wisp.cs" Line="45" Column="45" />
-      <File FileName="Assets\Scripts\Player\PlayerLayMine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/Wisp.cs" Line="18" Column="22" />
+      <File FileName="Assets/Scripts/Managers/HealthPack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerShooting.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerShotgunShooting.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/DropManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/EnemyHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/BlastMine.cs" Line="24" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
