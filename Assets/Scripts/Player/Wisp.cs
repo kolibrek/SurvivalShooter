@@ -19,7 +19,7 @@ public class Wisp : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other) {
-		if (target == null && other.GetComponent<EnemyHealth>() && !other.GetComponent<EnemyHealth>().isDead) {
+		if (target == null && other.GetComponent<EnemyHealth>() && !other.GetComponent<CapsuleCollider>().isTrigger) {
 			target = other.gameObject;
 		}
 	}

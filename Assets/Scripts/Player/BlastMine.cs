@@ -5,22 +5,20 @@ public class BlastMine : MonoBehaviour {
 
 	public float timer = 5f;
 	public int damage = 150;
-	
+	public GameObject explosion;
+
 	List<Collider> victims;
 	Light bombLight;
-	AudioSource bombAudio;
 
 	void Awake() {
 		victims = new List<Collider>();
-		bombLight = GetComponent<Light>();
-		bombAudio = GetComponent<AudioSource>();
+		bombLight = GetComponentInChildren<Light>();
 	}
 
 	void Update () {
 		timer -= Time.deltaTime;
 		
 		if (timer <= 0) {
-			bombAudio.Play();
 			Blast ();
 		}
 	}
@@ -45,6 +43,7 @@ public class BlastMine : MonoBehaviour {
 				}
 			}
 		}
-		Destroy(gameObject, 0.5f);
+		Instantiate(explosion, transform.position, Quaternion.identity);
+		Destroy(gameObject);
 	}
 }
