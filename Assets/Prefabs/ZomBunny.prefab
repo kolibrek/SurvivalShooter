@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: .5
-  attackDamage: 10
+  attackDamage: 9
 --- !u!114 &11410874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,6 +316,7 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
+  isDead: 0
   dropChance: .200000003
 --- !u!114 &11479196
 MonoBehaviour:
@@ -328,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f6618a0da65fa45b24d5105d5d8422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 20
 --- !u!135 &13568656
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2607,6 +2609,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: dropChance
       value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackDamage
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: timeToSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -26,7 +26,7 @@ public class PlayerLayMine : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetButtonDown("Jump")  && minesAvailable > 0) {
+		if (Input.GetButtonDown("Fire3")  && minesAvailable > 0 && Time.timeScale != 0) {
 			Instantiate(mine, this.transform.position + Vector3.up * 2, Quaternion.identity);
 			minesAvailable--;
 		}

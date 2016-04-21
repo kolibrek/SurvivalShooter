@@ -7,7 +7,6 @@ public class PlayerShotgunShooting : MonoBehaviour {
 	public float timeBetweenShells = 1.6f;
 	public float range = 10f;
 	public int ammoRemaining = 0;
-	public Text ammoDisplay;
 	
 	float timer;
 	
@@ -19,6 +18,7 @@ public class PlayerShotgunShooting : MonoBehaviour {
 	LineRenderer[] gunLines;
 	AudioSource[] gunAudio;
 	Light gunLight;
+	Text ammoDisplay;
 	float effectsDisplayTime = 0.2f;
 	
 	

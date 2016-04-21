@@ -19,7 +19,7 @@ public class Wisp : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other) {
-		if (target == null && other.GetComponent<EnemyHealth>() && !other.GetComponent<CapsuleCollider>().isTrigger) {
+		if (target == null && other.GetComponent<EnemyHealth>() && !other.GetComponent<EnemyHealth>().isDead) {
 			target = other.gameObject;
 		}
 	}
@@ -31,6 +31,11 @@ public class Wisp : MonoBehaviour {
 	}
 
 	void Update () {
+		// Clear dead targets
+		if (target != null && target.GetComponent<EnemyHealth>().isDead) {
+			target = null;
+		}
+
 		timer += Time.deltaTime;
 
 		if(target != null && timer >= timeBetweenShots && Time.timeScale != 0) {
